@@ -1,6 +1,8 @@
 import React from 'react';
+import styled from 'styled-components';
 
-export function CaretLeft() {
+
+export function CaretLeft({active}) {
   return (
     <Wrapper>
       <svg
@@ -17,7 +19,7 @@ export function CaretLeft() {
   );
 }
 
-export function CaretRight() {
+export function CaretRight({active}) {
   return (
     <Wrapper active>
       <svg

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Routes, Route, Link, Outlet } from 'react-router-dom';
+import { Button } from '../atoms/button';
 function HomePage() {
   return (
     <HomepageWrapper>
@@ -24,26 +25,5 @@ const HomepageWrapper = styled.div`
   margin: 0;
   padding: 0;
   overflow: hidden;
-`;
-const Button = styled.button`
-  width: fit-content;
-  height: 40px;
-  background: #fff;
-  border: none;
-  border: 1px solid #000;
-  margin: 10px;
-  cursor: pointer;
-  outline: none;
-  &:hover {
-    background: #000;
-
-    a {
-      color: #fff;
-    }
-  }
-  & a {
-    color: #000;
-    text-decoration: none;
-  }
 `;
 export default HomePage;

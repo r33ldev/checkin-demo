@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../../assets/images/brand/logo.png';
+// import logo from '../../assets/images/brand/logo.png';
+import logo from '../../../../assets/images/brand/bp.png'
 function Header() {
   return (
     <Wrapper>
@@ -25,7 +26,7 @@ const Navigation = styled.div`
   position: relative;
   span {
     height: 2px;
-    width: 2rem;
+    width: 2rem; 
     display: block;
     &,
     &:before,

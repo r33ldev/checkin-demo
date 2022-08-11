@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import CaretLeft from '../icon-components/CaretLeft';
-import CaretRight from '../icon-components/CaretRight';
-import Text from '../text-components/Text';
-import wavy from '../../assets/images/wavy-line.png';
-import wavy2 from '../../assets/images/wavy-line-2.png';
+import wavy from '../../../../assets/images/wavy-line.png';
+import Text from '../../atoms/text';
+import Footer from '../../molecules/footer';
 function Feature({ feature }) {
   return (
     <FeatureWrapper>
@@ -21,24 +19,11 @@ function Feature({ feature }) {
             <FeatureImage
               key={index}
               src={image}
-              //   style={{width: '100%', height: 'auto'}}
               alt={feature.title + ' ' + index}
             />
           ))}
       </FeatureCarousel>
-      <FeatureFooter>
-        <img src={wavy2} alt='wavy line' />
-        <FeatureFooterDetails>
-          <FeatureFooterDetailsText>
-            <Text text={'Our last projects'} size='1.3rem' color='#30363A' />
-            <Text text={'01/05 Coffe Shop'} size='1rem' color='#D0D5DA' />
-          </FeatureFooterDetailsText>
-          <FeatureFooterDetailsControls>
-            <CaretLeft />
-            <CaretRight active />
-          </FeatureFooterDetailsControls>
-        </FeatureFooterDetails>
-      </FeatureFooter>
+      <Footer />
     </FeatureWrapper>
   );
 }
@@ -53,6 +38,11 @@ const FeatureText = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 5rem;
+
+  @media(max-width:600px) {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
 `;
 const TitleWrapper = styled.div`
   width: 100%;
@@ -66,7 +56,7 @@ const FeatureCarousel = styled.div`
   margin-top: 2rem;
   justify-content: space-between;
   width: 100%;
-
+gap: 1.4rem;
   &:hover {
     img {
       opacity: 0.8;
@@ -76,7 +66,8 @@ const FeatureCarousel = styled.div`
 //   max-width: 100%;
 //   max-height: 30rem;
 const FeatureImage = styled.img`
-  height: auto;
+  // height: auto;
+  width:100%;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
@@ -84,25 +75,5 @@ const FeatureImage = styled.img`
     opacity: 1 !important;
   }
 `;
-const FeatureFooter = styled.div`
-  img {
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-`;
-const FeatureFooterDetails = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-`;
-const FeatureFooterDetailsText = styled.div`
-  line-height: 1.3;
-  text-align: left;
-`;
-const FeatureFooterDetailsControls = styled.div`
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-`;
+
 export default Feature;

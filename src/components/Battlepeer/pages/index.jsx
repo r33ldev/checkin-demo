@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import '../BATTLEPEER/assets/styles/styles.css';
-import BattlePeerFeature from '../components/Battlepeer/organism/feature';
+import BattlePeerFeature from '../organism/feature'
 function BattlePeerPage() {
   return (
-    <PageWrapper className='Batstlepeer'>
+    <PageWrapper className='Battlepeer_s'>
       <PageBody>
         <BattlePeerFeature />
       </PageBody>

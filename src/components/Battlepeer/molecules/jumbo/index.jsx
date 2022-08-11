@@ -1,19 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import Text from '../../components/text-components/Text';
-import Button from '../button-components/Button';
-import user1 from '../../assets/images/users/user1.jpg';
-import user2 from '../../assets/images/users/user2.jpg';
-import user3 from '../../assets/images/users/user3.jpg';
-import user4 from '../../assets/images/users/user4.jpg';
-import user5 from '../../assets/images/users/user5.jpg';
+import user1 from '../../../../assets/images/users/user1.jpg';
+import user2 from '../../../../assets/images/users/user2.jpg';
+import user3 from '../../../../assets/images/users/user3.jpg';
+import user4 from '../../../../assets/images/users/user4.jpg';
+import user5 from '../../../../assets/images/users/user5.jpg';
+import Button from '../../atoms/button';
+import Text from '../../atoms/text';
 function JumboTron() {
   const users = [user4, user1, user2, user3, user5];
   return (
     <JumboWrapper>
       <JumboText>
-        <Text text={'You are not alone.'} color='white' size='4rem' />
-        <Text text={'You have peers.'} color='white' size='4rem' />
+        <Text
+          text={'You are not alone.'}
+          color='white'
+          size='4rem'
+          type='title'
+        />
+        <Text color='white' size='4rem' type='title'>
+          You have <span>peers</span>.
+        </Text>
       </JumboText>
       <JumboDetials>
         <Button text={'Join peers'} />

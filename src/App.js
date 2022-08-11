@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
-import BattlePeerPage from './pages/Battlepeer';
-import HomePage from './pages/Home';
-import IntenchoPage from './pages/Intencho';
+import HomePage from '../src/components/Home/pages';
+import BattlePeerPage from '../src/components/Battlepeer/pages'
+import IntenchoPage from '../src/components/Intencho/pages'
 
 export default function App() {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import NavigationIcon from '../../components/icon-components/NavigationIcon';
-import logo from '../../assets/images/brand/logo.png';
+import { NavigationIcon } from '../../atoms/icon';
+import logo from '../../../../assets/images/brand/it.png';
 function Header({ props }) {
   const navItems = [
     { title: 'Home', url: '/' },
@@ -53,6 +53,10 @@ const LogoWrapper = styled.div`
 const HeaderMenu = styled.div`
   display: flex;
   gap: 2rem;
+
+  @media(max-width:800px) {
+    display:none
+  }
 `;
 const MoreButton = styled.div``;
 const MoreWrapper = styled.div`

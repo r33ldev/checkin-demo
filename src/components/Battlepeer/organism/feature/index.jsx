@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import Header from '../../molecules/header'
+import JumboTron from '../../molecules/jumbo'
+import featuredImage from '../../../../assets/images/office-discussion.png'
 function BattlePeerFeature() {
   return (
     <>

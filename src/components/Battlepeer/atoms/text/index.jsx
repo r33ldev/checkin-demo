@@ -1,6 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-function Text({ color, width, text, size, children, hovered, capitalize }) {
+import underline from '../../../../assets/images/underline.png';
+function Text({
+  color,
+  width,
+  text,
+  size,
+  children,
+  hovered,
+  capitalize,
+  type,
+}) {
   return (
     <TextWrapper
       hovered={hovered}
@@ -8,6 +18,7 @@ function Text({ color, width, text, size, children, hovered, capitalize }) {
       width={width}
       size={size}
       capitalize={capitalize}
+      type={type}
     >
       {text}
       {children}
@@ -22,22 +33,29 @@ const TextWrapper = styled.p`
   text-transform: ${(props) => (props.capitalize ? 'capitalize' : '')};
   font-size: ${(props) => (props.size ? props.size : '1.5rem')};
   margin: 0;
-  font-weight: '400';
+  font-weight: 400;
   &:hover {
     color: ${(props) => (props.hovered ? 'white' : '')};
   }
   & > span {
-    color: 'white';
-    opacity: '.33';
-    fontsize: '1.2rem';
+    position: relative;
+    &:after {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-image: url('');
+      background-color: ${(props) => (props.color ? props.color : '#C9C9D7')};
+      margin-top: 0.5rem;
+      position: absolute;
+    }
   }
   & > p {
     color: 'white';
-    font-weight: '100';
-    display: 'inline';
+    font-weight: 100;
+    display: inline;
   }
   @media (max-width: 1200px) {
-    font-size: 1.2rem;
+    font-size: ${(props) => (props.type == 'title' ? '2rem' : '1rem')};
   }
 `;
 export default Text;
