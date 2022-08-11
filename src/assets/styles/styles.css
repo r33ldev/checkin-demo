@@ -1,0 +1,32 @@
+.Battlepeer {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #806DFF;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,700;1,700&display=swap');
+@font-face {
+  font-family: "Tame";
+  src: url("./fonts/f9900674266d9f5035f8272a964a668b.eot");
+  /* IE9*/
+  src: url("./fonts/f9900674266d9f5035f8272a964a668b.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("./fonts/f9900674266d9f5035f8272a964a668b.woff2") format("woff2"),
+    /* chrome、firefox */
+    url("./fonts/f9900674266d9f5035f8272a964a668b.woff") format("woff"),
+    /* chrome、firefox */
+    url("./fonts/f9900674266d9f5035f8272a964a668b.ttf") format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("./fonts/f9900674266d9f5035f8272a964a668b.svg#Tame W01 Alternate") format("svg");
+  /* iOS 4.1- */
+}
+.Intencho {
+  font-family: sans-serif;
+  /* text-align: center; */
+  font-family: "Tame" !important;
+  cursor: url(../images/cursor.png), auto;
+}
